@@ -1,5 +1,5 @@
 import * as chalk from 'chalk';
-import { ChildProcess, exec, fork } from 'child_process';
+import { ChildProcess, fork } from 'child_process';
 import {
   ExecutorContext,
   joinPathFragments,
@@ -156,6 +156,7 @@ export async function* nodeExecutor(
                   NX_FILE_TO_RUN: fileToRunCorrectPath(fileToRun),
                   NX_MAPPINGS: JSON.stringify(mappings),
                 },
+                cwd: options.cwd ?? context.root,
               }
             );
 

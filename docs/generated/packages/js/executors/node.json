@@ -60,6 +60,12 @@
         "items": { "type": "string" },
         "x-priority": "important"
       },
+      "cwd": {
+        "type": "string",
+        "description": "Current working directory of the process.",
+        "default": ".",
+        "x-priority": "important"
+      },
       "watch": {
         "type": "boolean",
         "description": "Enable re-building when files change.",
